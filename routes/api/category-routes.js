@@ -4,10 +4,24 @@ const { Category, Product } = require('../../models');
 // The `/api/categories` endpoint
 
 router.get('/', (req, res) => {
-  
   // find all categories
   // be sure to include its associated Products
-});
+    // Category.findAll({
+    //   include:[Product]
+    // })
+    //   .then(dbPets => {
+    //     if (dbPets.length) {
+    //       res.json(dbPets);
+    //     } else {
+    //       res.status(404).json({ message: "No pets found!" });
+    //     }
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //     res.status(500).json({ message: "an error occured", err: err });
+    //   });
+  });
+
 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value

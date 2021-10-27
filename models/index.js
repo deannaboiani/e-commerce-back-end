@@ -15,17 +15,14 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 
-// Products belongToMany Tags (through ProductTag)
-// ProductTag = sequelize.define('product_tag', {
-//   role: Sequelize.STRING
-// });
-// Product.belongsToMany(Tag, 
-//   {through: ProductTag});
-// Product.addTag(product, { through: { id: 'product_id'}})
+// Product belongstomany tag
+Product.belongsToMany(Tag, 
+  {through: ProductTag})
 
-// Tags belongToMany Products (through ProductTag)
-// Tag.belongstoMany(Product, 
-//   {through: ProductTag });
+
+// tag belongstomany product
+Tag.belongsToMany(Product, 
+  {through: ProductTag })
 
 
 module.exports = {
